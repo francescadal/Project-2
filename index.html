@@ -21,6 +21,9 @@
     <!-- MyTemplate CSS -->
     <link href="css/style.css" rel="stylesheet">
 
+    <!-- MyTemplate CSS -->
+
+
 </head>
 
 <body>
@@ -48,6 +51,7 @@
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#home">Home</a></li>
 						<li><a href="#aboutus">About</a></li>
+
 						<li class="dropdown" role="presentation">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
 							  What You Should Know <span class="caret"></span>
@@ -58,8 +62,58 @@
 							  <li><a href="#third">Advice</a></li>
 							</ul>
 						</li>
+
 						<li><a href="#testimonials">Survivor Stories</a></li>
-						<li><a href="#contactus">Contact</a></li
+
+						<li class="dropdown" role="presentation">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+							  Register<span class="caret"></span></a>
+							<ul class="dropdown-menu bullet fadeIn" role="menu">
+
+								<ul>
+									<li id="login">
+      							<a id="login-trigger">Register</a>
+      								<div id="login-content">
+        								<form>
+          								<fieldset id="inputs">
+            								<input id="username" type="email" name="Email" placeholder="Your email address" required>
+            								<input id="password" type="password" name="Password" placeholder="Password" required>
+            								<input id="password" type="password" name="Password" placeholder="Password" required>
+          								</fieldset>
+         									<fieldset id="actions">
+            								<input type="submit" id="submit" value="Register">
+            								</fieldset>
+        								</form>
+      								</div>
+    							</li>
+    						</ul>
+							</ul>
+						<li>
+
+
+							<li class="dropdown" role="presentation">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login<span class="caret"></span></a>
+							<ul class="dropdown-menu bullet fadeIn" role="menu">
+								<ul>
+									<li id="login">
+      							<a id="login-trigger">Log in</a>
+      								<div id="login-content">
+        								<form>
+          								<fieldset id="inputs">
+            								<input id="username" type="email" name="Email" placeholder="Your email address" required>
+            								<input id="password" type="password" name="Password" placeholder="Password" required>
+          								</fieldset>
+         									<fieldset id="actions">
+            								<input type="submit" id="submit" value="Log in">
+            								<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+          								</fieldset>
+        								</form>
+      								</div>
+    							</li>
+    						</ul>
+							</ul>
+							</li>
+
 					</ul>
 
 				</div>
@@ -131,16 +185,19 @@
 					<div class="col-sm-7">
 						<h4>Best Practices</h4>
 						<p>
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-						</p>
-						<p>
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-
+							<ul>
+								<li>Check the status of your repo before making a commit</li>
+								<li>Work on a branch</li>
+								<li>Use git mv to move a file (so it's tracked)</li>
+								<li>Use git rm to remove a file (so it's tracked)</li>
+								<li>Read your error messages CAREFULLY</li>
+								<li>Use var to declare new variables</li>
+								<li>Use git from your root repo</li>
+								<li>Write down a plan</li>
+								<li>Time-box all things</li>
+								<li>Check your dependencies</li>
+								<li>Use symbols as keys in Ruby hash</li>
+							</ul>
 						</p>
 					</div>
 
@@ -160,16 +217,15 @@
 					<div class="col-sm-7">
 						<h4>Worst Practices</h4>
 						<p>
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-						</p>
-						<p>
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							<a href="#">Read More...</a>
+							<ul>
+								<li>Use numbers in column names</li>
+								<li>Put a repo inside another repo</li>
+								<li>Use 'rm' unless you are ABSOLUTELY sure of what it will do</li>
+								<li>Use tag id attribute to style your element</li>
+								<li>Be afraid to ask for help</li>
+								<li>Give up/Surrender</li>
+								<li>Streak on the 6th floor</li>
+							</ul>
 						</p>
 					</div>
 
@@ -189,16 +245,7 @@
 					<div class="col-sm-7">
 						<h4>Advice</h4>
 						<p>
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-						</p>
-						<p>
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							Donec eu elit eget ante accumsan sollicitudin sed id nibh. Suspendisse nisl tellus, imperdiet a gravida id, bibendum a sem.
-							<a href="#">Read More...</a>
+
 						</p>
 					</div>
 
