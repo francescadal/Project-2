@@ -46,5 +46,47 @@ console.log("Page is loaded");
  })
 
 
+$('#login').on('submit', function(event){
+    event.preventDefault();
+    console.log('it submits')
+
+    var email = $('#login-email').val();
+    console.log('login email is ', email);
+
+    var password =$('#login-pass').val();
+    console.log('login is', password);
+
+
+
+
+      var credentials = {
+      credentials: {
+        email: email,
+        password: password,
+      }
+    };
+
+
+
+      $.ajax({
+      method: 'POST',
+      url: 'http://localhost:3000/login',
+      contentType: 'application/json',
+      data: JSON.stringify(credentials),
+      dataType: 'json'
+    }).done(function(userData){
+      console.log("Login User: userData is ", userData);
+    })
+
+
+
+
+  });
+
+
+
+
+
+
 
 });
