@@ -1,5 +1,11 @@
+var yourLoginToken;
+
+
+
+
 $(document).ready(function() {
 console.log("Page is loaded");
+
 
  //create a registration submit handler//
  $('#register-form').on('submit', function(event){
@@ -76,6 +82,8 @@ $('#login').on('submit', function(event){
       dataType: 'json'
     }).done(function(userData){
       console.log("Login User: userData is ", userData);
+      yourLoginToken = userData.user.token;
+      location.replace('http://localhost:5000/index.html');
     })
 
 
