@@ -6,8 +6,8 @@
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Flat Login</title>
-    <meta name="description" content="">
+    <title>Login</title>
+    <meta name="description" content="Been there ">
     <meta name="author" content="">
 
     <!-- Mobile Specific Metas
@@ -38,13 +38,13 @@
                 <form>
                     <ul>
                         <li>
-                            <input type="text" placeholder="Username" />
+                            <input id="login-email" type="text" placeholder="Email" />
                         </li>
                         <li>
-                            <input type="password" placeholder="Password" />
+                            <input id="login-username" type="password" placeholder="Password" />
                         </li>
                         <li>
-                            <input type="submit" value="Login" class="button" />
+                            <input id="login-usename" type="submit" value="Login" class="button" />
                         </li>
                     </ul>
                 </form>
@@ -55,25 +55,25 @@
                 <p>
                     You should sign up if you want to learn the secrets of this class.
                 </p>
-                <form>
+                <form id="register-form">
                     <ul>
                         <li>
-                            <input type="text" placeholder="Username" />
+                            <input id="reg-email" type="text" placeholder="Email Address" />
                         </li>
                         <li>
-                            <input type="text" placeholder="Curent GA Status" />
+                            <input id="reg-status" type="text" placeholder="Curent GA Status" />
                         </li>
                         <li>
-                            <input type="password" placeholder="Password" />
+                            <input id="reg-password" type="password" placeholder="Password" />
                         </li>
                         <li>
-                            <input type="password" placeholder="Confirm Password" />
+                            <input id="reg-pasConfirm"type="password" placeholder="Confirm Password" />
                         </li>
                         <li>
-                            <input type="date" placeholder="birthday" />
+                            <input id="reg-birthday" type="date" placeholder="birthday" />
                         </li>
                         <li>
-                            <input type="submit" value="Sign Up" class="button" />
+                            <input id="reg-submit" type="submit" value="Sign Up" class="button" />
                         </li>
                     </ul>
                 </form>
@@ -85,16 +85,16 @@
                     To reset your password enter your email and your birthday
                     and we'll send you a link to reset your password.
                 </p>
-                <form>
+                <form id="reset-form">
                     <ul>
                         <li>
-                            <input type="text" placeholder="Email" />
+                            <input id="reset-email" type="text" placeholder="Email" />
                         </li>
                         <li>
-                            <input type="date" placeholder="Birthday" />
+                            <input id="reset-birthday" type="date" placeholder="Birthday" />
                         </li>
                         <li>
-                            <input type="submit" value="Send" class="button" />
+                            <input id="reset-submit" type="submit" value="Send" class="button" />
                         </li>
                     </ul>
                 </form>
@@ -102,8 +102,10 @@
             <!--/#register.form-action-->
         </div>
     </div>
-    <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+   <!-- <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
+
     <script src="js/jquery.login.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 
