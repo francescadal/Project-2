@@ -83,7 +83,7 @@ $('#login').on('submit', function(event){
     }).done(function(userData){
       console.log("Login User: userData is ", userData);
       yourLoginToken = userData.user.token;
-      location.replace('http://localhost:5000/index.html');
+      location.replace('homePage.html');
     })
 
 
