@@ -1,8 +1,6 @@
 var yourLoginToken;
 
 
-
-
 $(document).ready(function() {
 console.log("Page is loaded");
 
@@ -23,15 +21,11 @@ console.log("Page is loaded");
     var confirm =$('#reg-pasConfirm').val();
     console.log('Password is', confirm);
 
-    var birthday =$('#reg-birthday').val();
-    console.log('Birthday is', birthday);
-
     var credentials = {
       credentials: {
         email: email,
         password: password,
         password_confirmation: confirm,
-        birthday: birthday,
         status: status
       }
     };
