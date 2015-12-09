@@ -1,111 +1,150 @@
-
+<!DOCTYPE html>
 <html lang="en">
-<head>
-<link href="css/login.css" rel="stylesheet">
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <!-- Basic Page Needs
-  ================================================== -->
+  <head>
     <meta charset="utf-8">
-    <title>Login</title>
-    <meta name="description" content="Been there ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
     <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
 
-    <!-- Mobile Specific Metas
-  ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Been There, Stressed That</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 
-</head>
-<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="container">
-        <div class="flat-form">
-            <ul class="tabs">
-                <li>
-                    <a href="#login" class="active">Login</a>
-                </li>
-                <li>
-                    <a href="#register">Register</a>
-                </li>
-                <!--<li>
-                    <a href="#reset">Reset Password</a>
-                </li>-->
-            </ul>
-            <div id="login" class="form-action show">
-                <h1>Login</h1>
-                <p>
 
-                </p>
-                <form id="login-form">
-                    <ul>
-                        <li>
-                            <input id="login-email" type="text" placeholder="Email" />
-                        </li>
-                        <li>
-                            <input id="login-pass" type="password" placeholder="Password" />
-                        </li>
-                        <li>
-                            <input id="login-submit" type="submit" value="Login" class="button"/>
-                        </li>
-                    </ul>
-                </form>
+    <!-- Custom styles for this template -->
+
+    <!--<link href="css/cover.css" rel="stylesheet">-->
+
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Been There, Stressed That</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                </ul>
+              </nav>
             </div>
-            <!--/#login.form-action-->
-            <div id="register" class="form-action hide">
-                <h1>Register</h1>
-                <p>
-                    You should sign up if you want to learn the secrets of this class.
-                </p>
-                <form id="register-form">
-                    <ul>
-                        <li>
-                            <input id="reg-email" type="text" placeholder="Email Address" />
-                        </li>
-                        <li>
-                            <input id="reg-status" type="text" placeholder="Curent GA Status" />
-                        </li>
-                        <li>
-                            <input id="reg-password" type="password" placeholder="Password" />
-                        </li>
-                        <li>
-                            <input id="reg-pasConfirm" type="password" placeholder="Confirm Password" />
-                        </li>
-                        <li>
-                            <input id="reg-birthday" type="date" placeholder="birthday" />
-                        </li>
-                        <li>
-                            <input id="reg-submit" type="submit" value="Sign Up" class="button" />
-                        </li>
-                    </ul>
-                </form>
-            </div>
-            <!--/#register.form-action
-            <div id="reset" class="form-action hide">
-                <h1>Reset Password</h1>
-                <p>
-                    To reset your password enter your email and your birthday
-                    and we'll send you a link to reset your password.
-                </p>
-                <form id="reset-form">
-                    <ul>
-                        <li>
-                            <input id="reset-email" type="text" placeholder="Email" />
-                        </li>
-                        <li>
-                            <input id="reset-birthday" type="date" placeholder="Birthday" />
-                        </li>
-                        <li>
-                            <input id="reset-submit" type="submit" value="Send" class="button" />
-                        </li>
-                    </ul>
-                </form>
-            </div>
-            /#register.form-action-->
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Been There, Stressed That</h1>
+            <p class="lead">Let us guide you with helpful hints, experience and mildy aggresive rants.</p>
+            <p class="lead">
+          </div>
+
+         <div class="bs-example">
+              <!-- Login Modal -->
+              <a href="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Login</a>
+              <!-- Modal HTML -->
+                <div id="myModal" class="modal fade" class = "userInfo" >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title">Login</h4>
+                      </div>
+                     <form id="login">
+
+
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">Email</label>
+                        <input type="text" placeholder="Email" name="email" />
+                      </div>
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">Password</label>
+                        <input type="password" placeholder="Password" name="password" />
+                      </div>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-default" >Login</button>
+
+                    </form>
+                    </div>
+                  </div>
+                </div>
+                       <!-- Login Modal close-->
+          </div>
+
+          <div class="bs-example">
+            <a href="#myRegister" class="btn btn-lg btn-default" data-toggle="modal">Register</a>
+            <!-- Modal HTML -->
+              <div id="myRegister" class="modal fade">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                      <h4 class="modal-title">Register</h4>
+                    </div>
+                    <form id="register-form">
+
+                    <div class="form-group">
+                                <label for="recipient-name" class="control-label">Email</label>
+                                <input type="text" placeholder="Email Address" name="email"/>
+                    </div>
+                    <div class="form-group">
+                                <label for="recipient-name" class="control-label">Current GA Status</label>
+                                <input type="text" placeholder="Curent GA Status" name="gaStatus" />
+                    </div>
+                    <div class="form-group">
+                                <label for="recipient-name" class="control-label">Password</label>
+                                <input type="password" placeholder="Password" name="password"/>
+                    </div>
+                    <div class="form-group">
+                                <label for="recipient-name" class="control-label">Confirm Password</label>
+                                <input type="password" placeholder="Confirm Password" name="confirmPassword" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-default" id "reg-submit">Sign Up</button>
+                    </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
+
+
+          <div class="mastfoot">
+            <p>word</p>
+          <div class="inner">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-   <!-- <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>-->
 
-    <script src="js/jquery.login.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/app.js"></script>
-</body>
+   </body>
 </html>
-
