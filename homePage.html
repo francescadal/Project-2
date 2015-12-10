@@ -44,7 +44,7 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a href="#">Logout</a></li>
+            <li role="presentation" id ="logout" ><a href="#">Logout</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Been There, Stressed That</h3>
@@ -95,9 +95,34 @@
 
 
 
-      </div>
+      </div >
     </div>
 
+
+
+
+
+
+<script id="example-template" type="text/x-handlebars-template">
+
+  <!-- people is looked up on the global context, the one we pass to the compiled template -->
+
+  {{#each comment}}
+ <!-- Here the context is each individual person. So we can access its properties directly: -->
+    <li data-comment-id="{{id}}">{{content}}</li>
+
+  {{/each}}
+
+</script>
+
+
+
+
+
+
+
+      <ul id="advice">
+      </ul>
 
     </div> <!-- /container -->
 
@@ -124,7 +149,7 @@
         <p>&copy; 2015 Company, Inc.</p>
       </footer>
 
-
+  <script src="js/handlebars-v4.0.5.js"></script>
    <script src="js/homePage.js"></script>
   </body>
 </html>

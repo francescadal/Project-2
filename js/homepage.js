@@ -17,11 +17,38 @@ $(document).ready(function(){
         },
         url: 'http://localhost:3000/comments',
         data: {comment: {content: advice}},
-        }).done(function(dataFromServer){
+        }).done(function(data){
+          $("#advice").append('<li data-comment-id="'+ data.id+'">' + data.content + '</li>');
         console.log("Created the postComment");
-        console.log("Data back from server is " + dataFromServer);
+        console.log("Data back from server is " , data);
         }).fail(function(){
         console.error("Failed to create the postComment")
       })
     });
+
+
+
+
+    $("#retrievePosts").on('click', function(event){
+   $.ajax({
+        method: 'get',
+        headers : {
+          Authorization : "Token token=" + localStorage.getItem("Token")
+        },
+        url: 'http://localhost:3000/comments',
+        data: {comment: {content: advice}},
+        }).done(function(data){
+          var theTemplateScript = $("#example-template").html();
+          var theTemplate = Handlebars.compile(theTemplateScript);
+          var theCompiledHtml = theTemplate(advice);
+          $("#advice").html(theCompiledHtml);
+        console.log("Created the postComment");
+        console.log("Data back from server is " , data);
+        }).fail(function(){
+        console.error("Failed to create the postComment")
+      })
+  });
+
+
+
 });
