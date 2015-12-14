@@ -7,7 +7,6 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title>Been There, Stressed That</title>
 
@@ -107,7 +106,7 @@
 
   <!-- people is looked up on the global context, the one we pass to the compiled template -->
 
-  {{#each comment}}
+  {{#each comments}}
  <!-- Here the context is each individual person. So we can access its properties directly: -->
     <li data-comment-id="{{id}}">{{content}}</li>
 
@@ -120,7 +119,7 @@
 
 
 
-
+      <button type="submit" id="retrieveComment" class="btn btn-success green">Past Posts</button>
       <ul id="advice">
       </ul>
 

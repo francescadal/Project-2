@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
     // Append comment from user to advice column
     $("#postComment").on('click', function(event){
       // Don't do the usual stuff you do when you click a link
@@ -29,26 +31,26 @@ $(document).ready(function(){
 
 
 
-    $("#retrievePosts").on('click', function(event){
-   $.ajax({
-        method: 'get',
+    $("#retrieveComment").on('click', function(event){
+      $.ajax({
+        method: 'GET',
         headers : {
           Authorization : "Token token=" + localStorage.getItem("Token")
         },
-        url: 'http://localhost:3000/comments',
-        data: {comment: {content: advice}},
+        url: 'http://localhost:3000/comments'
         }).done(function(data){
           var theTemplateScript = $("#example-template").html();
           var theTemplate = Handlebars.compile(theTemplateScript);
-          var theCompiledHtml = theTemplate(advice);
+          var theCompiledHtml = theTemplate(data);
           $("#advice").html(theCompiledHtml);
         console.log("Created the postComment");
         console.log("Data back from server is " , data);
         }).fail(function(){
         console.error("Failed to create the postComment")
       })
-  });
+    });
 
-
+  // Simulate someone clicking on the button as soon as this JS is run
+ $("#retrieveComment").trigger('click');
 
 });
