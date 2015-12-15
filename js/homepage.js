@@ -53,4 +53,27 @@ $(document).ready(function(){
   // Simulate someone clicking on the button as soon as this JS is run
  $("#retrieveComment").trigger('click');
 
+
+
+$("#delete").on("click", function(e) {
+    event.preventDefault();
+    //$(this).parent().remove();
+    $($.ajax({
+      url: 'http://localhost:3000/comments',
+      type: 'Delete',
+      data: {comment: {content: advice}},
+    })
+    .done(function() {
+      console.log("success");
+    })
+    .fail(function() {
+      console.log("error");
+    })
+    .always(function() {
+      console.log("complete");
+    })
+    );
+});
+
+
 });

@@ -108,7 +108,7 @@
 
   {{#each comments}}
  <!-- Here the context is each individual person. So we can access its properties directly: -->
-    <li data-comment-id="{{id}}">{{content}}</li>
+    <li data-comment-id ="{{id}}" contenteditable= "true" id ="textarea">{{content}}</li> <button id="delete" >delete</button>
 
   {{/each}}
 
@@ -119,7 +119,7 @@
 
 
 
-      <button type="submit" id="retrieveComment" class="btn btn-success green">Past Posts</button>
+      <button type="submit" id="retrieveComment" class="btn btn-success green" hidden="hidden">Past Posts</button>
       <ul id="advice">
       </ul>
 
