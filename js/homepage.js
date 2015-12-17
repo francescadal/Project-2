@@ -20,14 +20,13 @@ $(document).ready(function(){
         url: 'http://localhost:3000/comments',
         data: {comment: {content: advice}},
         }).done(function(data){
-          $("#advice").append('<li data-comment-id="'+ data.id+'">' + data.content + '</li>');
+          $("#advice").append($("#retrieveComment"));
         console.log("Created the postComment");
         console.log("Data back from server is " , data);
         }).fail(function(){
         console.error("Failed to create the postComment")
       })
     });
-
 
 
 
@@ -50,30 +49,29 @@ $(document).ready(function(){
       })
     });
 
+
+    $("#delete").on('click', function(event) {
+      event.preventDefault();
+      $.ajax({
+        method: 'Delete',
+        headers : {
+          Authorization : "Token token=" + localStorage.getItem("Token")
+        },
+        url:'http://localhost:3000/comment',
+        })
+        .done(function() {
+          console.log("success");
+        })
+        .fail(function() {
+          console.log("error");
+        })
+    });
+
   // Simulate someone clicking on the button as soon as this JS is run
  $("#retrieveComment").trigger('click');
 
 
 
-$("#delete").on("click", function(e) {
-    event.preventDefault();
-    //$(this).parent().remove();
-    $($.ajax({
-      url: 'http://localhost:3000/comments',
-      type: 'Delete',
-      data: {comment: {content: advice}},
-    })
-    .done(function() {
-      console.log("success");
-    })
-    .fail(function() {
-      console.log("error");
-    })
-    .always(function() {
-      console.log("complete");
-    })
-    );
-});
 
 
 });

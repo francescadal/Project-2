@@ -35,6 +35,7 @@ $(document).ready(function() {
     dataType: 'json'
   }).done(function(userData){
     console.log("Registered User: userData is ", userData);
+    alert("You are registered. Please login")
   })
   });
 
